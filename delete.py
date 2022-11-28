@@ -6,13 +6,14 @@ def deleteVehicle(id):
     #cambiar contraseña en caso de ser diferente
     try:
         connection = psycopg2.connect(user="postgres",
-                                      password="12345678",
+                                      password=" ",
                                       host="127.0.0.1",
                                       port="5432",
-                                      database="vehicles")
-        #Delete method
+                                      database="vehicle")
+
         cursor = connection.cursor()
-        sql_delete_query = """Delete vehicle on l'id = %s"""
+        #Delete method
+        sql_delete_query = """Delete from vehicle where id = %s"""
         cursor.execute(sql_delete_query, (id,))
         connection.commit()
         count = cursor.rowcount
@@ -28,4 +29,4 @@ def deleteVehicle(id):
             print("PostgreSQL s'ha tancat la connexió")
 
 #llamada a la funcion
-deleteVehicle(1)
+deleteVehicle(3)
