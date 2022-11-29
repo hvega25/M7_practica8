@@ -1,14 +1,14 @@
 import psycopg2 #importa la libreria necesaria para la base de datos
 
 
-def insert ():
+def insert():
     try:
         # la variable coneccion se le asigna el metodo con los parametros
         connection = psycopg2.connect(
             host='localhost',
             user='postgres',
             password=' ',  # tenemos diferentes contraseñas en el pgadmin4
-            database='vehicles')
+            database='vehicle')
         print("Conexión exitosa")  # imprime si hay conexion es una bandera verde
         cursor = connection.cursor()  # esta variable es la de control sobre la tabla
 
