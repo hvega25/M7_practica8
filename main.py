@@ -1,5 +1,4 @@
-import delete as eliminar
-import read as leer
+import delete
 
-#print(leer.)
-print(eliminar.deleteVehicle(1))
+print("Ahora se eliminara el vehiculo con id 1")
+print(delete.deleteVehicle(1))
