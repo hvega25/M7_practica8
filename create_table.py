@@ -1,6 +1,8 @@
 import psycopg2
 
 def create_tables():
+    # Connexion con un try
+    # cambiar contraseña en caso de ser diferente
     try:
         connection = psycopg2.connect(user="postgres",
                                       password=" ",
@@ -11,8 +13,8 @@ def create_tables():
         cursor = connection.cursor()
         #CREAR TABLAS
         command = """
-        CREATE TABLE vehicles (
-            id INTEGER PRIMARY KEY,
+        CREATE TABLE vehicle (
+            id SERIAL PRIMARY KEY,
             marca VARCHAR(55) NOT NULL,
             preu INTEGER NOT NULL,
             color VARCHAR(55) NOT NULL
@@ -23,6 +25,7 @@ def create_tables():
         cursor.close()
         # subir cambios
         connection.commit()
+        print("Taula creada correctament ")
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     finally:
@@ -31,3 +34,5 @@ def create_tables():
             cursor.close()
             connection.close()
             print("PostgreSQL s'ha tancat la connexió")
+
+create_tables()

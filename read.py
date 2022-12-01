@@ -1,7 +1,7 @@
 import psycopg2 #importa la libreria necesaria para la base de datos
 
 
-def read ():
+def read():
 #usamos try para evitar cierres bruscos
     try:
     #la variable coneccion se le asigna el metodo con los parametros
@@ -9,7 +9,7 @@ def read ():
             host='localhost',
             user='postgres',
             password = ' ', #tenemos diferentes contraseñas en el pgadmin4
-            database = 'vehicles')
+            database = 'vehicle')
         print("Conexión exitosa") #imprime si hay conexion es una bandera verde
         cursor = connection.cursor() # esta variable es la de control sobre la tabla
 
