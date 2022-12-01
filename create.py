@@ -5,7 +5,7 @@ def create():
    conn = psycopg2.connect(
       database="postgres", user='postgres', password=' ', host='127.0.0.1', port='5432'
    )
-   conn.autocommit = True
+   conn.autocommit = True;
 
    #Creando un cursor
    cursor = conn.cursor()
@@ -19,3 +19,5 @@ def create():
 
    #Closing the connection
    conn.close()
+
+create()

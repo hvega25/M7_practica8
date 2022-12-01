@@ -34,3 +34,5 @@ def create_tables():
             cursor.close()
             connection.close()
             print("PostgreSQL s'ha tancat la connexió")
+
+create_tables()

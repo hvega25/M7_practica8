@@ -13,7 +13,7 @@ def insert():
         cursor = connection.cursor()  # esta variable es la de control sobre la tabla
 
         #query necesaria para la ejecucion de la base de datos
-        postgres_insert_query = """ INSERT INTO vehicle (id, marca, precio,color) VALUES (%s,%s,%s,%s)"""
+        postgres_insert_query = """ INSERT INTO vehicle (id, marca, preu,color) VALUES (%s,%s,%s,%s)"""
         record_to_insert = (9, 'Lambo', 60, 'amarillo') #valores
         cursor.execute(postgres_insert_query, record_to_insert)#ejecucion de la query
 

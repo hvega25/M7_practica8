@@ -1,9 +1,9 @@
-import delete
 import create
 import create_table
 import insert
 import read
 import update
+import delete
 
 print("Creacion de base de datos de vehicles")
 print(create.create())
