@@ -29,4 +29,4 @@ def deleteVehicle(id):
             print("PostgreSQL s'ha tancat la connexió")
 
 #llamada a la funcion
-deleteVehicle(3)
+deleteVehicle(1)
